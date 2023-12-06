@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>Домашнее задание - занятие 4</title>
+    <script>
+      // С помощью sort() найдите и выведите в консоль наибольшее и наименьшее число массива
+      let numbers = [0, -23, 5, 90, 104, 80, -55];
+      const numbersMin = numbers.sort((a, b) => a - b);
+      console.log(numbersMin[0]);
+      const numbersMax = numbers.sort((a, b) => b - a);
+      console.log(numbersMax[0]);
+
+      // *Найдите отдельно сумму отрицательных и положительных элементов массива с помощью reduce().
+
+      const numbersSumMinus = numbers
+        .filter((number) => number < 0)
+        .reduce((accumulator, currentValue) => accumulator + currentValue);
+      console.log(numbersSumMinus);
+
+      const numbersSumPlus = numbers
+        .filter((number) => number > 0)
+        .reduce((accumulator, currentValue) => accumulator + currentValue);
+      console.log(numbersSumPlus);
+
+      //Удалите повторяющиеся элементы массива с помощью Set:
+      let languages = [
+        "javascript",
+        "php",
+        "php",
+        "typescript",
+        "javascript",
+        "html",
+        "html",
+        "java",
+        "javascript",
+      ];
+
+      const uniqueArray = [...new Set(languages)];
+      console.log(uniqueArray);
+    </script>
+  </head>
+  <body></body>
+</html>
