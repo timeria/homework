@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>Домашнее задание - занятие 6</title>
+    <script src="classProduct.js"></script>
+    <script src="classProductTechnology.js"></script>
+    <script src="classProductFurniture.js"></script>
+    <script src="classBasket.js"></script>
+    <script src="classCustomer.js"></script>
+    <script>
+    // Задание №2. Интернет магазин
+    // 2.1. Создать абстрактный класс Product, содержащий свойства: название товара, цена, рейтинг и комментарий.
+    // Product - это абстрактный класс, то есть его можно использовать в наследовании, но нельзя создать его экземпляр.
+    // 2.2. Создать класс ProductTechnology, который наследует класс Product.
+    // 2.3. Создать класс ProductFurniture, который наследует класс Product.
+    // 2.4. Создать класс Basket, который содержит массив из купленных товаров (ProductTechnology и ProductFurniture).
+    // 2.5. Создать класс Customer, содержащий свойтва: имя, e-mail, пароль и экземпляр класса Basket.
+    // Создать экземпляр класса Customer.
+
+    // *Задание №3
+    // Переписать код задания 1 или 2 (на выбор) на протопипы (ES5).
+
+    // Для каждой задачи желательно создать отдельные папки,
+    // каждый класс реализовать в отдельном файле className.js, где className является названием класса.
+      </script>
+    <script>
+        let productIphone = new ProductTechnology("iphone5", "5000", "3", "Старая модель", "1000", "100");
+        let productAndroid = new ProductTechnology("xiomi", "20000", "4", "Описание модели", "3000", "200");
+        let productBed = new ProductFurniture("nadezda34200", "40000", "5", "Удобная кровать", "1000", "2000");
+        let productArmchair = new ProductFurniture("armchairnew", "5000", "3", "Раскладное кресло", "500", "2000");
+        let productsBasket = new Basket(productIphone, productBed);
+        productsBasket.addProduct(productIphone, productBed);
+        let userCustomer = new Customer("Новый пользователь", "admin@mail.ru", "5678954", productsBasket);
+    </script>
+    
+  </script>
+</head>
+<body></body>
+</html>
